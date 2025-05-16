@@ -1,7 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- ... head remains unchanged ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Emily Putnam, multimedia journalist">
+    <title>Emily Putnam</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DejaVu+Sans+Mono&display=swap');
+
+        body {
+            font-family: 'DejaVu Sans Mono', monospace;
+            background-color: #1e1e1e;
+            color: #d1d1d1;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #151515;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #d1d1d1;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #d1d1d1;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px; /* Adjust paragraph spacing */
+        }
+
+        .work-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -5px;
+        }
+
+        .work-item {
+            margin: 5px;
+            width: calc(50% - 10px);
+            background-color: #2a2a2a;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative; /* Positioning context for the link */
+            display: flex; /* Use flexbox for better layout */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            height: 100%; /* Ensure the box has a defined height */
+            flex-grow: 1;
+        }
+
+        .work-item a {
+            display: flex; /* Allow for stacking of image and text */
+            flex-direction: column; /* Stack image and title vertically */
+            align-items: center; /* Center the content */
+            text-decoration: none; /* Remove underline from the link */
+            color: inherit; /* Inherit color from the parent */
+            height: 100%; /* Make the anchor fill the container */
+            padding: 10px; /* Optional padding for touch targets */
+        }
+
+        .work-item img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 3px; /* Rounded corners */
+            margin-bottom: 10px; /* Space between image and title */
+        }
+
+        .work-item h3 {
+            margin: 0; /* Remove margin for consistent spacing */
+            color: #d1d1d1; /* Ensure text color is visible */
+        }
+
+        .work-item:hover {
+            transform: scale(1.03); /* Hover effect */
+        }
+
+        .scroll-box {
+            width: 100%; /* Make sure it takes up full width */
+            height: hidden;
+        }
+
+        .scroll-box video {
+            max-width: 100%; /* Ensure the video is responsive */
+            height: 100%; /* Maintain aspect ratio */
+            display: block; /* Ensure no extra space around the video */
+            margin: 0 auto; /* Center the video */
+            object-fit: contain;
+        }
+
+        .scroll-box {
+            position: relative; /* Positioning context for the link */
+        }
+
+        .video-link {
+            display: block; /* Make the link a block element to occupy full width */
+            margin-bottom: 10px;
+            text-align: center; /* Center the text */
+            color: #d1d1d1; /* Link color */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px; /* Padding for the link */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            margin-bottom: 5px; /* Space between the link and the video */
+            border-radius: 5px;
+        }
+
+        .video-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        .work-item {
+            display: flex;
+            flex-direction: column;
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 5px;
+            width: calc(33% - 30px);
+            height: auto; /* Let the height adjust based on content */
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #151515;
+            color: #999;
+        }
+
+        footer a {
+            color: #d1d1d1;
+            text-decoration: none;
+        }
+
+        a {
+            color: #ADD8E6; /* Light blue color for links */
+            text-decoration: none; /* Removes underline */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* Ensure mobile responsiveness */
+        @media (max-width: 768px) {
+            .work-item {
+                width: 100%; /* Full width on small screens */
+                margin: 10px 0; /* Adjust margins */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,9 +190,9 @@
     <section>
         <h2>about</h2>
         <p>Hi! I'm Emily, a recent grad from University of California, Berkeley. </p>
+       
     </section>
-
-    <!-- Video and Audio Section -->
+    <!-- Work Section -->
     <section>
         <h2>video and audio</h2>
         <div class="work-grid">
@@ -34,6 +210,7 @@
                     <h3>Space Enterprise at Berkeley aims to be first collegiate team to launch liquid rocket beyond Earth</h3>
                     <br>
                     <p>Producer, editor</p>
+                    </h3>
                 </a>
             </div>
             <div class="work-item">
@@ -44,97 +221,102 @@
                     <p>Director, editor</p>
                 </a>
             </div>
+
+           <!-- Audio Item (Now in the same section) -->
+        <div class="work-item">
+            <a href="#">
+            
+                <h3>The Justice Show</h3>
+                <p>TJS aired on KALX in 2022</p>
+            </a>
+            <audio controls>
+                <source src="https://github.com/eputnam88/my-website/releases/download/v1.0/justiceshowgithub.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+    </div>
+</section>
+
             <div class="work-item">
-                <a href="#">
-                    <h3>The Justice Show</h3>
-                    <p>TJS aired on KALX in 2022</p>
+                <a href="https://www.sfchronicle.com/california/article/solar-panels-san-francisco-19526186.php?fromrichie" target="_blank">
+                    <img src="" alt="San Francisco has seen the most dramatic drop in solar adoption across California">
+                    <h3>San Francisco has seen the most dramatic drop in solar adoption across California</h3>
+                    <br>
+                    <p>Excel, Python</p>
+                    </h3>
                 </a>
-                <audio controls>
-                    <source src="https://github.com/eputnam88/my-website/releases/download/v1.0/justiceshowgithub.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
             </div>
-            <!-- MOVED a-side sessions -->
             <div class="work-item">
+                <a href="https://www.sfchronicle.com/bayarea/article/mark-farrell-san-francisco-19746218.php?fromrichie" target="_blank">
+                    <img src="images/behested screenshot.png" alt="As an S.F. supervisor, Mark Farrell wanted to fund a pet cause. He repeatedly turned to companies with business at City Hall">
+                    <h3>As an S.F. supervisor, Mark Farrell wanted to fund a pet cause. He repeatedly turned to companies with business at City Hall</h3>
+                    <br>
+                    <p>Google Pinpoint, Excel</p>
+                    </h3>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://dailycal-projects.netlify.app/2023-06-30-warnme" target="_blank">
+                    <img src="images/warnme screenshot.png" alt="Sound the alarm: A look inside WarnMe notifications">
+                    <h3>Sound the alarm: A look inside WarnMe notifications</h3>
+                    <br>
+                    <p>JavaScript React</p>
+                    </h3>
+                </a>
+            </div>
+
+    <section>
+        <h2>music coverage</h2>
+        <div class="work-grid">
+            <!-- Predicting Judicial Decisions Work Item -->
+            <div class="work-item">
+                <a href="https://www.dailycal.org/arts/music/concerts/kim-deal-deals-in-frenzied-fun-at-the-fillmore/article_5db3c795-8248-451f-b0ae-011da47f056d.html" target="_blank">
+                    <img src="images/kimdeal.JPG" alt="data science lifecycle">
+                    <h3>Kim Deal deals in frenzied fun at the Fillmore</h3>
+                    <p></p>
+                </a>
+            </div>
+    
+            <div class="work-item">
+                <a href="https://berkeleybside.com/angel-olsen-at-regency-ballroom-return-rebirth-in-earnest/" target="_blank">
+                    <img src="images/angelolsen.JPG" alt="pset">
+                    <h3>Angel Olsen at Regency Ballroom: return/rebirth in earnest</h3>
+                </a>
+            </div>
+         </div>
+
+         <div class="work-item">
                 <a href="https://berkeleybside.com/productions/" target="_blank">
-                    <img src="images/asidepic.png" alt="The a-side sessions">
+                    <img src="images/asidepic.png" alt="pset">
                     <h3>The a-side sessions</h3> 
                     <p>The a-side sessions are...</p>
                 </a>
             </div>
-        </div>
+         </div>
     </section>
+    
 
-    <!-- Other stories -->
-    <div class="work-item">
-        <a href="https://www.sfchronicle.com/california/article/solar-panels-san-francisco-19526186.php?fromrichie" target="_blank">
-            <img src="" alt="San Francisco has seen the most dramatic drop in solar adoption across California">
-            <h3>San Francisco has seen the most dramatic drop in solar adoption across California</h3>
-            <br>
-            <p>Excel, Python</p>
-        </a>
-    </div>
-    <div class="work-item">
-        <a href="https://www.sfchronicle.com/bayarea/article/mark-farrell-san-francisco-19746218.php?fromrichie" target="_blank">
-            <img src="images/behested screenshot.png" alt="Mark Farrell article">
-            <h3>As an S.F. supervisor, Mark Farrell wanted to fund a pet cause...</h3>
-            <br>
-            <p>Google Pinpoint, Excel</p>
-        </a>
-    </div>
-    <div class="work-item">
-        <a href="https://dailycal-projects.netlify.app/2023-06-30-warnme" target="_blank">
-            <img src="images/warnme screenshot.png" alt="WarnMe notifications">
-            <h3>Sound the alarm: A look inside WarnMe notifications</h3>
-            <br>
-            <p>JavaScript React</p>
-        </a>
-    </div>
-
-    <!-- Music Coverage Section -->
-    <section>
-        <h2>music coverage</h2>
-        <div class="work-grid">
-            <div class="work-item">
-                <a href="https://www.dailycal.org/arts/music/concerts/kim-deal-deals-in-frenzied-fun-at-the-fillmore/article_5db3c795-8248-451f-b0ae-011da47f056d.html" target="_blank">
-                    <img src="images/kimdeal.JPG" alt="Kim Deal live at the Fillmore">
-                    <h3>Kim Deal deals in frenzied fun at the Fillmore</h3>
-                </a>
-            </div>
-            <div class="work-item">
-                <a href="https://berkeleybside.com/angel-olsen-at-regency-ballroom-return-rebirth-in-earnest/" target="_blank">
-                    <img src="images/angelolsen.JPG" alt="Angel Olsen concert photo">
-                    <h3>Angel Olsen at Regency Ballroom: return/rebirth in earnest</h3>
-                </a>
-            </div>
-            <!-- NEW Berkeley City Council finance article -->
-            <div class="work-item">
-                <a href="https://www.sfchronicle.com/elections/article/berkeley-city-council-race-money-2024" target="_blank">
-                    <img src="images/election.png" alt="Berkeley City Council finance">
-                    <h3>Berkeley City Council race: Here's how much money candidates have received</h3>
-                    <p>Campaign finance coverage</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Talks & Presentations -->
     <section>
         <h2>talks & presentations</h2>
         <br>
         * <b>Northeastern University</b>. “Student in the Loop: The Value of Student Feedback & Involvement in Data Ethics Education.” Mozilla Program on Responsible Computing Education. 2024.
-        <br><br>
+        <br>
+        <br>
         * <b>Berkeley Law.</b> “Bias in Artificial Intelligence: An Overview.” 2023.
-        <br><br>
+        <br>
+        <br>
         * <b>Berkeley Law.</b> “What's in an Algorithm?: The U.S. Criminal Justice System, Data Science, and Law.” 2022.
-        <br><br>
+        <br>
+        <br>
         * <b>UC Berkeley Data Science Society.</b> “What Data Tells Us About Race.” 2021.
+
     </section>
 
     <!-- Contact Section -->
     <section>
         <h2>contact me</h2>
-        <p>Feel free to reach out at <a href="mailto:lydiasidhom@berkeley.edu">lydiasidhom@berkeley.edu.</a></p>
+        <p>Feel free to reach out at <a href="mailto:lydiasidhom@berkeley.edu">lydiasidhom@berkeley.edu.</a> </p>
         <p><a href="https://x.com/SidhomLydia" target="_blank">Twitter/X</a> | <a href="https://www.linkedin.com/in/lydia-sidhom000/" target="_blank">LinkedIn</a></p>
     </section>
 
