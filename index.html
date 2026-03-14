@@ -2,444 +2,325 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Emily Putnam, multimedia journalist">
-    <title>Emily Putnam</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DejaVu+Sans+Mono&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal website of Emily Putnam, multimedia journalist">
+<title>Emily Putnam</title>
 
-        body {
-            font-family: 'DejaVu Sans Mono', monospace;
-           background-color: #1e1e1e;
-            color: #d1d1d1;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        header {
-            text-align: center;
-            padding: 30px;
-            background-color: #151515;
-        }
+@import url('https://fonts.googleapis.com/css2?family=DejaVu+Sans+Mono&display=swap');
 
-        header h1 {
-            font-size: 2.5rem;
-            color: #d1d1d1;
-        }
-
-        header p {
-            font-size: 1rem;
-        }
-
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            font-size: 1.8rem;
-            color: #d1d1d1;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 20px; /* Adjust paragraph spacing */
-        }
-
-        .work-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: -5px;
-        }
-
-        .work-item {
-            margin: 5px;
-            width: calc(50% - 10px);
-            background-color: #2a2a2a;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-            position: relative; /* Positioning context for the link */
-            display: flex; /* Use flexbox for better layout */
-            flex-direction: column; /* Stack elements vertically */
-            align-items: center; /* Center horizontally */
-            height: 100%; /* Ensure the box has a defined height */
-            flex-grow: 1;
-        }
-
-        .work-item a {
-            display: flex; /* Allow for stacking of image and text */
-            flex-direction: column; /* Stack image and title vertically */
-            align-items: center; /* Center the content */
-            text-decoration: none; /* Remove underline from the link */
-            color: inherit; /* Inherit color from the parent */
-            height: 100%; /* Make the anchor fill the container */
-            padding: 10px; /* Optional padding for touch targets */
-        }
-
-        .work-item img {
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 3px; /* Rounded corners */
-            margin-bottom: 10px; /* Space between image and title */
-        }
-
-        .work-item h3 {
-            margin: 0; /* Remove margin for consistent spacing */
-            color: #d1d1d1; /* Ensure text color is visible */
-        }
-
-        .work-item:hover {
-            transform: scale(1.03); /* Hover effect */
-        }
-
-        .scroll-box {
-            width: 100%; /* Make sure it takes up full width */
-            height: hidden;
-        }
-
-        .scroll-box video {
-            max-width: 100%; /* Ensure the video is responsive */
-            height: 100%; /* Maintain aspect ratio */
-            display: block; /* Ensure no extra space around the video */
-            margin: 0 auto; /* Center the video */
-            object-fit: contain;
-        }
-
-        .scroll-box {
-            position: relative; /* Positioning context for the link */
-        }
-
-        .video-link {
-            display: block; /* Make the link a block element to occupy full width */
-            margin-bottom: 10px;
-            text-align: center; /* Center the text */
-            color: #d1d1d1; /* Link color */
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 10px; /* Padding for the link */
-            border-radius: 5px; /* Rounded corners */
-            text-decoration: none; /* Remove underline */
-            margin-bottom: 5px; /* Space between the link and the video */
-            border-radius: 5px;
-        }
-
-        .video-link:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-        }
-
-        .work-item {
-            display: flex;
-            flex-direction: column;
-            background-color: #2a2a2a;
-            padding: 15px;
-            margin: 5px;
-            width: calc(33% - 30px);
-            height: auto; /* Let the height adjust based on content */
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #151515;
-            color: #999;
-        }
-
-        footer a {
-            color: #d1d1d1;
-            text-decoration: none;
-        }
-
-        a {
-            color: #ADD8E6; /* Light blue color for links */
-            text-decoration: none; /* Removes underline */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-
-
-        /* Ensure mobile responsiveness */
-        @media (max-width: 768px) {
-            .work-item {
-                width: 100%; /* Full width on small screens */
-                margin: 10px 0; /* Adjust margins */
-            }
-        }
-    </style>
-</head>
-<body>
-
-    .radio-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+body {
+font-family: 'DejaVu Sans Mono', monospace;
+background-color: #1e1e1e;
+color: #d1d1d1;
+margin: 0;
+padding: 0;
 }
 
-    <header>
-        <h1>Emily Putnam</h1>
-        <p> multimedia journalist </p>
-    </header>
+header {
+text-align: center;
+padding: 30px;
+background-color: #151515;
+}
 
-    <!-- About Section -->
-    <section>
-        <h2>about</h2>
-        <p>Hi! I recently graduated from UC Berkeley with a degree in microbial biology. I  write about science, music, politics, and anything else true in whatever format fits best. My work has explored fentanyl and the DEA, ICE protests, rocketry, controversial medical research, campaign financing, and music. I also led a team producing live sessions and interviews with Bay Area bands. 
-I’ve guest lectured at Freie Universität Berlin and presented my research at UC Berkeley.</p> 
+header h1 {
+font-size: 2.5rem;
+}
 
-</p>In my free time I play violin for <a href="https://open.spotify.com/track/6185j53d1us6JQFpZopzbB?si=76c12bc6339f4437&nd=1&dlsi=353033bfeba74019">Chalk Talk</a>  (we’re going on tour!), read, and write everything down. </p>
+section {
+padding: 40px 20px;
+max-width: 900px;
+margin: 0 auto;
+}
 
-<!-- PUBLIC RADIO -->
+section h2 {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+
+p {
+margin-bottom: 20px;
+}
+
+/* GRID FOR MOST SECTIONS */
+
+.work-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.work-item {
+background-color: #2a2a2a;
+padding: 15px;
+text-align: center;
+transition: transform 0.3s;
+flex: 1 1 calc(50% - 10px);
+box-sizing: border-box;
+}
+
+.work-item:hover {
+transform: scale(1.03);
+}
+
+.work-item a {
+text-decoration: none;
+color: inherit;
+display: block;
+}
+
+.work-item img {
+max-width: 100%;
+border-radius: 3px;
+margin-bottom: 10px;
+}
+
+/* PUBLIC RADIO (FULL WIDTH) */
+
+.radio-grid {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.radio-grid .work-item {
+width: 100%;
+}
+
+/* LINKS */
+
+a {
+color: #ADD8E6;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+text-align: center;
+padding: 20px 0;
+background-color: #151515;
+color: #999;
+}
+
+/* MOBILE */
+
+@media (max-width:768px) {
+.work-item {
+flex: 1 1 100%;
+}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+<h1>Emily Putnam</h1>
+<p>multimedia journalist</p>
+</header>
+
+
 <section>
-  <h2>public radio</h2>
-  <div class="radio-grid">
+<h2>about</h2>
 
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/03/02/how-the-smithsonian-frames-american-history/" target="_blank">
-        <h3>How the Smithsonian Frames American History</h3>
-      </a>
-    </div>
+<p>
+Hi! I recently graduated from UC Berkeley with a degree in microbial biology. I write about science, music, politics, and anything else true in whatever format fits best. My work has explored fentanyl and the DEA, ICE protests, rocketry, controversial medical research, campaign financing, and music. I also led a team producing live sessions and interviews with Bay Area bands.
+</p>
 
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/02/17/why-america-isnt-walkable/" target="_blank">
-        <h3>Why America Isn’t Walkable</h3>
-      </a>
-    </div>
+<p>
+I’ve guest lectured at Freie Universität Berlin and presented my research at UC Berkeley.
+</p>
 
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/02/02/is-the-supreme-court-more-powerful-than-congress-now/" target="_blank">
-        <h3>Is the Supreme Court More Powerful Than Congress Now?</h3>
-      </a>
-    </div>
+<p>
+In my free time I play violin for
+<a href="https://open.spotify.com/track/6185j53d1us6JQFpZopzbB">Chalk Talk</a>
+(we’re going on tour!), read, and write everything down.
+</p>
 
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/01/28/the-u-n-charter-used-to-prevent-war/" target="_blank">
-        <h3>The U.N. Charter Used to Prevent War</h3>
-      </a>
-    </div>
-
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/01/22/who-is-gavin-newsom-really/" target="_blank">
-        <h3>Who Is Gavin Newsom Really?</h3>
-      </a>
-    </div>
-
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/02/24/how-healthy-is-president-trump/" target="_blank">
-        <h3>How Healthy Is President Trump?</h3>
-      </a>
-    </div>
-
-    <div class="work-item">
-      <a href="https://think.kera.org/2026/02/05/resisting-the-post-truth-society/" target="_blank">
-        <h3>Resisting the Post-Truth Society</h3>
-      </a>
-    </div>
-
-  </div>
 </section>
-        
-         <!-- SCIENCE CLIPS -->
+
+
 <section>
-  <h2>selected science clips</h2>
-  <div class="work-grid">
+<h2>selected science clips</h2>
 
-    <div class="work-item">
-      <a href="https://alumni.berkeley.edu/california-magazine/2025-fall-winter/the-tealest-teal/">
-        <h3>The Tealest Teal</h3>
-        <p><em>California Magazine</em></p>
-      </a>
-    </div>
+<div class="work-grid">
 
-    <div class="work-item">
-      <a href="https://alumni.berkeley.edu/california-magazine/2025-fall-winter/behold-berkelocene/" target="_blank">
-        <h3>Behold Berkelocene</h3>
-        <p><em>California Magazine</em></p>
-      </a>
-    </div>
+<div class="work-item">
+<a href="https://alumni.berkeley.edu/california-magazine/2025-fall-winter/the-tealest-teal/">
+<h3>The Tealest Teal</h3>
+<p><em>California Magazine</em></p>
+</a>
+</div>
 
-    <div class="work-item">
-      <a href="https://docs.google.com/document/d/1QIRj2OhKz-c5jv0QPVv9JjwGlhMVGITEnMvM1Fezqbw/edit?usp=sharing" target="_blank">
-        <h3>Why bird flu’s pandemic potential remains a mystery</h3>
-        <p><em>The Daily Californian</em></p>
-      </a>
-    </div>
+<div class="work-item">
+<a href="https://alumni.berkeley.edu/california-magazine/2025-fall-winter/behold-berkelocene/">
+<h3>Behold Berkelocene</h3>
+<p><em>California Magazine</em></p>
+</a>
+</div>
 
-    <div class="work-item">
-      <a href="https://docs.google.com/document/d/1yB7VBNWIYHMafNwOrsHcK_nE_Wc-XPGCNZg-PQ1jDRo/edit?usp=sharing" target="_blank">
-        <h3>Fentanyl, xylazine, and the negligence that made them killers</h3>
-        <p><em>The Daily Californian</em></p>
-      </a>
-    </div>
+<div class="work-item">
+<a href="https://docs.google.com/document/d/1QIRj2OhKz-c5jv0QPVv9JjwGlhMVGITEnMvM1Fezqbw/edit">
+<h3>Why bird flu’s pandemic potential remains a mystery</h3>
+<p><em>The Daily Californian</em></p>
+</a>
+</div>
 
-  </div>
-</section>
-    </section>
-    <!-- Work Section -->
-    <section>
-        <h2>video and audio</h2>
-         <div class="work-grid">
-            <div class="work-item">
-                <a href="https://www.instagram.com/kerathink/reel/DU-4hCgkV57/" target="_blank">
-                    <img src="" alt="">
-                    <h3>The history of tiny gardens</h3>
-                    <br>
-                    <p>Editor</p>
-                </a>
-            </div>
-        <div class="work-grid">
-            <div class="work-item">
-                <a href="https://www.instagram.com/reel/DK2kE1Vy0R9/" target="_blank">
-                    <img src="images/antiicenew.png" alt="">
-                    <h3>Bay Area ICE protests see peaceful marches, hundreds arrested</h3>
-                    <br>
-                    <p>Editor</p>
-                </a>
-            </div>
-            <div class="work-item">
-                <a href="https://www.instagram.com/dailycal/reel/DG9OlaIS-lN/?hl=en" target="_blank">
-                    <img src="images/standup.png" alt="UC Berkeley stands up for science">
-                    <h3>Hundreds protest Trump's research funding cuts at UC Berkeley</h3>
-                    <br>
-                    <p>Director, editor</p>
-                </a>
-            </div>
-            <div class="work-item">
-                <a href="https://www.youtube.com/watch?v=8fjfKhigvqw" target="_blank">
-                    <img src="images/SEB.jpg" alt="">
-                    <h3>Space Enterprise at Berkeley aims to be first collegiate team to launch liquid rocket beyond Earth</h3>
-                    <br>
-                    <p>Producer, editor</p>
-                    </h3>
-                </a>
-            </div>
-            <div class="work-item">
-                <a href="https://www.instagram.com/dailycal/reel/DGosUcyyOvY/" target="_blank">
-                    <img src="images/newstrike.png" alt="">
-                    <h3>Thousands of striking healthcare workers and researchers leave UC system reeling</h3>
-                    <br>
-                    <p>Director, editor</p>
-                </a>
-            </div>
+<div class="work-item">
+<a href="https://docs.google.com/document/d/1yB7VBNWIYHMafNwOrsHcK_nE_Wc-XPGCNZg-PQ1jDRo/edit">
+<h3>Fentanyl, xylazine, and the negligence that made them killers</h3>
+<p><em>The Daily Californian</em></p>
+</a>
+</div>
 
-           <!-- Audio Item (Now in the same section) -->
-        <div class="work-item">
-            <a href="#">
-            
-                <h3>The Justice Show</h3>
-                <p>TJS aired on KALX in 2022</p>
-            </a>
-            <audio controls>
-                <source src="https://github.com/eputnam88/my-website/releases/download/v1.0/justiceshowgithub.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-            
-        <div class="work-item">
-            <a href="https://berkeleybside.com/productions/" target="_blank">
-                <img src="images/asidepic.png" alt="The a-side sessions">
-                <h3>The A-Side Sessions</h3> 
-                <p>Sound, videography</p>
-            </a>
-        </div>
-
-    </div>
+</div>
 </section>
 
 
-<!-- SELECTED COVERAGE -->
 <section>
-  <h2>selected coverage</h2>
-  <div class="work-grid">
-      
-    <div class="work-item">
-      <a href="https://www.thenation.com/article/society/trump-university-california-unions-immigration-international-students/" target="_blank">
-        <h3>As Universities Fold to Trump, This Union Is Still Fighting for International Students</h3>
-        <p><em>The Nation</em></p>
-      </a>
-    </div>
-      
-    <div class="work-item">
-      <a href="https://www.dailycal.org/news/city/elections/berkeley-city-council-race-heres-how-much-money-candidates-have-received/article_fa993c0a-9986-11ef-9bc3-2f52bcfcfb05.html" target="_blank">
-        <img src="images/election.png" alt="Berkeley City Council race funding article">
-        <h3>Berkeley City Council race: Here's how much money candidates have received</h3>
-      </a>
-    </div>
+<h2>public radio</h2>
 
-    <div class="work-item">
-      <a href="https://www.dailycal.org/arts/music/concerts/kim-deal-deals-in-frenzied-fun-at-the-fillmore/article_5db3c795-8248-451f-b0ae-011da47f056d.html" target="_blank">
-        <img src="images/kimdeal.JPG" alt="Kim Deal at the Fillmore">
-        <h3>Kim Deal deals in frenzied fun at the Fillmore</h3>
-        <p><em>The Daily Californian</em></p>
-      </a>
-    </div>
+<div class="radio-grid">
 
-    <div class="work-item">
-      <a href="https://docs.google.com/document/d/1eOPziu6gs99qlactGuwOC3jiVg57D4DKWr65yOXLNdo/edit?usp=sharing" target="_blank">
-        <h3>The pandemic showed us how to help the unhoused — then we stopped</h3>
-        <p><em>Berkeley Medical Journal</em></p>
-      </a>
-    </div>
+<div class="work-item">
+<a href="https://think.kera.org/2026/03/02/how-the-smithsonian-frames-american-history/">
+<h3>How the Smithsonian Frames American History</h3>
+</a>
+</div>
 
-    <div class="work-item">
-      <a href="https://berkeleybside.com/angel-olsen-at-regency-ballroom-return-rebirth-in-earnest/" target="_blank">
-        <img src="images/angelolsen.JPG" alt="Angel Olsen live at Regency Ballroom">
-        <h3>Angel Olsen at Regency Ballroom: return/rebirth in earnest</h3>
-      </a>
-    </div>
+<div class="work-item">
+<a href="https://think.kera.org/2026/02/17/why-america-isnt-walkable/">
+<h3>Why America Isn’t Walkable</h3>
+</a>
+</div>
 
-  </div>
+<div class="work-item">
+<a href="https://think.kera.org/2026/02/02/is-the-supreme-court-more-powerful-than-congress-now/">
+<h3>Is the Supreme Court More Powerful Than Congress Now?</h3>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://think.kera.org/2026/01/28/the-u-n-charter-used-to-prevent-war/">
+<h3>The U.N. Charter Used to Prevent War</h3>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://think.kera.org/2026/01/22/who-is-gavin-newsom-really/">
+<h3>Who Is Gavin Newsom Really?</h3>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://think.kera.org/2026/02/24/how-healthy-is-president-trump/">
+<h3>How Healthy Is President Trump?</h3>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://think.kera.org/2026/02/05/resisting-the-post-truth-society/">
+<h3>Resisting the Post-Truth Society</h3>
+</a>
+</div>
+
+</div>
+
 </section>
 
-<!-- OTHER -->
+
 <section>
-  <h2>other</h2>
-  <div class="work-grid">
+<h2>video and audio</h2>
 
-    <div class="work-item">
-      <a href="https://www.dailycal.org/uncertain-slants-of-light/article_9acb48d4-0e20-4196-9be2-38037898da9a.html" target="_blank">
-        <h3>Uncertain slants of light</h3>
-        <p><em>Personal Essay</em></p>
-      </a>
-    </div>
+<div class="work-grid">
 
-  </div>
+<div class="work-item">
+<a href="https://www.instagram.com/kerathink/reel/DU-4hCgkV57/">
+<h3>The history of tiny gardens</h3>
+<p>Editor</p>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://www.instagram.com/reel/DK2kE1Vy0R9/">
+<img src="images/antiicenew.png">
+<h3>Bay Area ICE protests see peaceful marches, hundreds arrested</h3>
+<p>Editor</p>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://www.instagram.com/dailycal/reel/DG9OlaIS-lN/">
+<img src="images/standup.png">
+<h3>Hundreds protest Trump's research funding cuts at UC Berkeley</h3>
+<p>Director, editor</p>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://www.youtube.com/watch?v=8fjfKhigvqw">
+<img src="images/SEB.jpg">
+<h3>Space Enterprise at Berkeley aims to be first collegiate team to launch liquid rocket beyond Earth</h3>
+<p>Producer, editor</p>
+</a>
+</div>
+
+<div class="work-item">
+<a href="https://www.instagram.com/dailycal/reel/DGosUcyyOvY/">
+<img src="images/newstrike.png">
+<h3>Thousands of striking healthcare workers and researchers leave UC system reeling</h3>
+<p>Director, editor</p>
+</a>
+</div>
+
+<div class="work-item">
+<h3>The Justice Show</h3>
+<p>TJS aired on KALX in 2022</p>
+<audio controls>
+<source src="https://github.com/eputnam88/my-website/releases/download/v1.0/justiceshowgithub.mp3">
+</audio>
+</div>
+
+<div class="work-item">
+<a href="https://berkeleybside.com/productions/">
+<img src="images/asidepic.png">
+<h3>The A-Side Sessions</h3>
+<p>Sound, videography</p>
+</a>
+</div>
+
+</div>
+
 </section>
 
 
-    
+<section>
+<h2>contact</h2>
 
-   <section>
-  <h2>talks</h2>
-  <p>* <b>Rausser College of Natural Resources Honors Symposium</b> “Surviving CEQA: equity, climate change, housing, and California wetlands" 2025.</p>
-  <p>* <b>Humboldt University of Berlin</b> “Science in English: How an Unusual Immune Response Can Be Exploited to Treat Malaria" 2024.</p>
-  <p>* <b>Berkeley Medical Journal</b> "New Approaches to Street Medicine" 2022.</p>
-  <p>* <b>UC Berkeley Integrative Biology Research Symposium</b> “The insects that thwart leaf death and what 'zombie leaves' teach us about how plants die” 2021.</p>
+<p>
+Feel free to reach out at
+<a href="mailto:egputnam@berkeley.edu">egputnam@berkeley.edu</a>
+</p>
 
-    </section>
+<p>
+<a href="https://www.linkedin.com/in/emily-putnam888/">LinkedIn</a>
+</p>
 
-    <!-- Contact Section -->
-    <section>
-        <h2>contact me</h2>
-        <p>Feel free to reach out at <a href="mailto:egputnam@berkeley.edu">egputnam@berkeley.edu.</a> </p>
-        <a href="https://www.linkedin.com/in/emily-putnam888/" target="_blank">LinkedIn</a></p>
-    </section>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Emily Putnam.</p>
-    </footer>
+
+<footer>
+<p>© 2025 Emily Putnam</p>
+</footer>
 
 </body>
 </html>
-
